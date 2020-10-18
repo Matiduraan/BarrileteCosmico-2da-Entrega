@@ -1,11 +1,11 @@
 import destinos.*
 import viaje.*
-import usuarios.*
+import medioDeTransporte.*
 
 object barrileteCosmico {
 	
-	var destinos = #{garlic,goodAirs,silver,toninas}
-	var transportes = #{}
+	var destinos = #{garlic,silver,toninas,goodAirs}
+	var transportes = #{avion}
 	
 	method destinosMasImportantes() {
 		return destinos.filter({unDestino => unDestino.esDestacado()})
@@ -27,9 +27,8 @@ object barrileteCosmico {
 		return destinos.map({unDestino => unDestino.nombre()})
 	}
 	
-	method armarViaje(unUsuario,unDestino){
-		const unViaje = new Viaje(origen = unUsuario.localidadDeOrigen(), destino = unDestino, transporte = self.transporteRandom())
-	}
+	method armarViaje(usuario,destino) = const nuevoViaje = new Viaje(origen = usuario.localidadDeOrigen(), destino = destino, transporte = self.transporteRandom())
+			
 	
 	method transporteRandom(){
 		return transportes.anyOne()
