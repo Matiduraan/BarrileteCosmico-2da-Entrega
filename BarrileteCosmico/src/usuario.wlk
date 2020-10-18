@@ -1,25 +1,41 @@
-import localidad.*
+import destinos.*
 import medioDeTransporte.*
 import viaje.*
-import destinos.*
+import barrileteCosmico.*
 
 class Usuario{
 	
-	var historial 
-	var listaUsuarios 
-	var dineroEnCuenta 
+	var historial
+	var listaUsuarios
+	var dineroEnCuenta
 	var localidadDeOrigen
+	
+	method localidadDeOrigen() = localidadDeOrigen
 	
 	method historial() = historial
 		
 	method dineroEnCuenta() = dineroEnCuenta
+
+	method viajar(destino){
+		var nuevoViaje = barrileteCosmico.armarViaje(self,destino)
+		if (self.puedeViajar(nuevoViaje)){
+			historial.add(nuevoViaje)
+		    dineroEnCuenta -= nuevoViaje.precioDelViaje()
+		    localidadDeOrigen = destino
+		}
+	}	
 	
-	method localidadDeOrigen() = localidadDeOrigen
+	method puedeViajar(viaje){
+		return viaje.precioDelViaje() < dineroEnCuenta
+	}
+	
 	
 	method kilometrosRecorridos() {
-		return historial.sum({unViaje => unViaje.distanciaEntreLocalidades()})
+		var kilometrosTotales = 0
+		historial.forEach({viaje => kilometrosTotales += viaje.distanciaEntreLocalidades()})
+		return kilometrosTotales
 	}
-		
+	
 	method seguirA(unUsuario) {
 		self.agregarSeguido(unUsuario)
 		unUsuario.agregarSeguido(self)
@@ -29,17 +45,4 @@ class Usuario{
 		listaUsuarios.add(unUsuario)
 	}
 	
-	method viajar(unViaje){
-		if (self.puedeViajar(unViaje)){
-			historial.add(unViaje)
-			dineroEnCuenta -= unViaje.precioDelViaje()
-			localidadDeOrigen = unViaje.destino()
-		}
-	}
-	
-	method puedeViajar(unViaje) {
-		return dineroEnCuenta > unViaje.precioDelViaje()
-	}
-	
 }
-
