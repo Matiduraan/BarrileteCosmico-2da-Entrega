@@ -1,5 +1,5 @@
 import barrileteCosmico.*
-import destinos.*
+import localidad.*
 
 
 describe "condiciones iniciales de Barrilete Cosmico"{
