@@ -28,12 +28,8 @@ object barrileteCosmico {
 	}
 	
 	method armarViaje(usuario,destino) {
-		return new Viaje(origen = usuario.localidadDeOrigen(), destino = destino, transporte = self.transporteRandom())
+		return new Viaje(origen = usuario.localidadDeOrigen(), destino = destino, transporte = transportes.anyOne())
 	}
-			
-	
-	method transporteRandom(){
-		return transportes.anyOne()
-	}
+
 	
 }
