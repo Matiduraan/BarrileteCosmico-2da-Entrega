@@ -1,4 +1,4 @@
-import destinos.*
+import localidad.*
 import viaje.*
 import medioDeTransporte.*
 
