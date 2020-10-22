@@ -13,8 +13,7 @@ class Viaje {
 	
 	method precioDelViaje(){
 		const kilometrosARecorrer = origen.distanciaAOtraLocalidad(destino)
-		const precioPorKilometros = (transporte.precioPorKilometro())*kilometrosARecorrer
-		return precioPorKilometros + (destino.precio())
+		return transporte.precioPorDistancia(kilometrosARecorrer) + (destino.precio())
 	}
 	
 	method distanciaEntreLocalidades() {
