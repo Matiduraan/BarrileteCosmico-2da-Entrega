@@ -1,4 +1,4 @@
-import destinos.*
+import localidad.*
 import medioDeTransporte.*
 import viaje.*
 import barrileteCosmico.*
@@ -46,3 +46,11 @@ class Usuario{
 	}
 	
 }
+
+const pabloHari = new Usuario(
+	historial = [viaje1,viaje2], 
+	listaUsuarios = #{}, 
+	dineroEnCuenta = 7500, 
+	localidadDeOrigen = goodAirs
+)
+
