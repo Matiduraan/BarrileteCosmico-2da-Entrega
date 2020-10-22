@@ -1,7 +1,6 @@
 import localidad.*
 import medioDeTransporte.*
-import destinos.*
-import usuarios.*
+import usuario.*
 
 class Viaje {
 
