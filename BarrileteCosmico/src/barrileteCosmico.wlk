@@ -28,8 +28,7 @@ object barrileteCosmico {
 	}
 	
 	method armarViaje(usuario,destino) {
-		const nuevoViaje = new Viaje(origen = usuario.localidadDeOrigen(), destino = destino, transporte = self.transporteRandom())
-		return nuevoViaje
+		return new Viaje(origen = usuario.localidadDeOrigen(), destino = destino, transporte = self.transporteRandom())
 	}
 			
 	
