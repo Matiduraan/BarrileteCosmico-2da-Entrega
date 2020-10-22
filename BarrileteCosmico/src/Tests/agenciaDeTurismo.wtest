@@ -27,7 +27,7 @@ describe "condiciones iniciales de Barrilete Cosmico"{
 
 describe "Barrilete Cosmico aplica descuentos a todos sus destinos" {
 
-	const destinos = #{garlic,silver,toninas,goodAirs}
+	const localidades = #{garlic,silver,toninas,goodAirs}
 	
 	fixture {
 		barrileteCosmico.aplicarlesDescuento(0.15)
@@ -59,7 +59,7 @@ describe "Barrilete Cosmico aplica descuentos a todos sus destinos" {
 
 	test "todos los destinos deben tener el certificado de descuento" {
 		
-		assert.that(destinos.all({unDestino => unDestino.tieneEnElEquipaje("certificado de descuento")}))
+		assert.that(localidades.all({unaLocalidad => unaLocalidad.tieneEnElEquipaje("certificado de descuento")}))
 	}
 
 }
