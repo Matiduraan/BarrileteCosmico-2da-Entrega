@@ -11,6 +11,9 @@ class MedioDeTransporte {
 		return velocidad*unaDistancia
 	}
 	
+	method precioPorDistancia(unaDistancia){
+		return precioPorKilometro*unaDistancia
+	}	
 }
 
 const avion = new MedioDeTransporte(velocidad = 5, precioPorKilometro = 10, nombre='avion')
