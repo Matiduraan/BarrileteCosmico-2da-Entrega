@@ -3,7 +3,7 @@ import destinos.*
 describe "Tests de Garlic's Sea" {
 	
 	test "Garlic's Sea no es una localidad peligrosa" {
-		assert.notThat(garlic.esPeligroso())
+		assert.notThat(garlic.esPeligrosa())
 	}
 	
 	test "el equipaje imprescindible, luego de aplicarle 15% a Garlic's Sea, contiene 3 elementos"{
@@ -32,7 +32,7 @@ describe "Tests de Silver's Sea" {
 	}
 	
 	test "Silver's Sea no es una localidad peligrosa" {
-		assert.notThat(silver.esPeligroso())
+		assert.notThat(silver.esPeligrosa())
 	}
 	
 	test "la distancia entre Silver'Sea y Garlic's Sea son 9 kilometros" {
@@ -44,7 +44,7 @@ describe "Tests de Silver's Sea" {
 describe "Tests de Last Toninas" {
 	
 	test "Last Toninas es una localidad peligrosa" {
-		assert.that(toninas.esPeligroso())
+		assert.that(toninas.esPeligrosa())
 	}
 	
 	test "el precio de Last Toninas luego del 25% de descuento, es de $2625" {
@@ -65,7 +65,7 @@ describe "Tests de Last Toninas" {
 describe "Tests de Good Airs" {
 	
 	test "Good Airs no es una localidad peligrosa" {
-		assert.notThat(goodAirs.esPeligroso())
+		assert.notThat(goodAirs.esPeligrosa())
 	}
 	
 	test "el ultimo elemento del equipaje imprescindible es un protector solar" {
