@@ -1,7 +1,7 @@
-import usuarios.*
+import usuario.*
 import viaje.*
 import medioDeTransporte.*
-import destinos.*
+import localidad.*
 
 describe "Condiciones iniciales de Pablo Hari" {
 	
