@@ -7,7 +7,7 @@ object barrileteCosmico {
 	var localidades = #{garlic,silver,toninas,goodAirs}
 	var transportes = #{avion}
 	
-	method localidadesMasImportantes() {
+	method destinosMasImportantes() {
 		return localidades.filter({unaLocalidad => unaLocalidad.esDestacada()})
 	}
 	
@@ -19,11 +19,11 @@ object barrileteCosmico {
 		return localidades.any({unaLocalidad => unaLocalidad.esPeligrosa()})
 	}
 	
-	method localidadesPeligrosas() {
+	method destinosPeligrosos() {
 		return localidades.filter({unaLocalidad => unaLocalidad.esPeligrosa()})
 	}
 	
-	method cartaDeLocalidades() {
+	method cartaDeDestinos() {
 		return localidades.map({unaLocalidad => unaLocalidad.nombre()})
 	}
 	
