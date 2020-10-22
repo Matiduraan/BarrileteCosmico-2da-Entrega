@@ -10,13 +10,13 @@ class Localidad{
 	
 	method kilometraje() = kilometraje
 	
-	method esDestacado() = precio > 2000
+	method esDestacada() = precio > 2000
 	
 	method cantidadDeElementos() = equipajeImprescindible.size()
 	
 	method ultimoElementoDelEquipaje() = equipajeImprescindible.last()
 	
-	method esPeligroso() = self.tieneEnElEquipaje("vacuna")
+	method esPeligrosa() = self.tieneEnElEquipaje("vacuna")
 	
 	method aplicarDescuento(unValor) {
 		equipajeImprescindible.add("certificado de descuento")
