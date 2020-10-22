@@ -4,27 +4,27 @@ import medioDeTransporte.*
 
 object barrileteCosmico {
 	
-	var destinos = #{garlic,silver,toninas,goodAirs}
+	var localidades = #{garlic,silver,toninas,goodAirs}
 	var transportes = #{avion}
 	
-	method destinosMasImportantes() {
-		return destinos.filter({unDestino => unDestino.esDestacado()})
+	method localidadesMasImportantes() {
+		return localidades.filter({unaLocalidad => unaLocalidad.esDestacada()})
 	}
 	
 	method aplicarlesDescuento(unDescuento) {
-		destinos.forEach({unDestino => unDestino.aplicarDescuento((unDestino.precio())*unDescuento)})
+		localidades.forEach({unaLocalidad => unaLocalidad.aplicarDescuento((unaLocalidad.precio())*unDescuento)})
 	}
 	
 	method esExtrema() {
-		return destinos.any({unDestino => unDestino.esPeligroso()})
+		return localidades.any({unaLocalidad => unaLocalidad.esPeligrosa()})
 	}
 	
-	method destinosPeligrosos() {
-		return destinos.filter({unDestino => unDestino.esPeligroso()})
+	method localidadesPeligrosas() {
+		return localidades.filter({unaLocalidad => unaLocalidad.esPeligrosa()})
 	}
 	
-	method cartaDeDestinos() {
-		return destinos.map({unDestino => unDestino.nombre()})
+	method cartaDeLocalidades() {
+		return localidades.map({unaLocalidad => unaLocalidad.nombre()})
 	}
 	
 	method armarViaje(usuario,destino) {
