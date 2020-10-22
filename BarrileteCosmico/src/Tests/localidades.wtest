@@ -1,4 +1,4 @@
-import destinos.*
+import localidad.*
 
 describe "Tests de Garlic's Sea" {
 	
