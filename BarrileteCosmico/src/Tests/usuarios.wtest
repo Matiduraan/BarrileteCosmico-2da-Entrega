@@ -14,7 +14,7 @@ describe "Condiciones iniciales de Pablo Hari" {
 	}
 	
 	test "su localidad de origen no es peligrosa" {
-		assert.notThat((pabloHari.localidadDeOrigen()).esPeligroso())
+		assert.notThat((pabloHari.localidadDeOrigen()).esPeligrosa())
 	}
 }
 
