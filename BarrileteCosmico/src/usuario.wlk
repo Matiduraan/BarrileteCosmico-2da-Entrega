@@ -31,9 +31,7 @@ class Usuario{
 	
 	
 	method kilometrosRecorridos() {
-		var kilometrosTotales = 0
-		historial.forEach({viaje => kilometrosTotales += viaje.distanciaEntreLocalidades()})
-		return kilometrosTotales
+		return historial.sum({viaje => viaje.distanciaEntreLocalidades()})
 	}
 	
 	method seguirA(unUsuario) {
